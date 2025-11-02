@@ -1,12 +1,12 @@
-
-import {defineComponent} from 'vue';
+import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: "App",
-    setup() {
-      return ()=><><div>
-
-      Hello World</div></>
-
-    }
+  name: 'App',
+  setup() {
+    return () => (
+      <>
+        <div>Hello World</div>
+      </>
+    )
+  },
 })
