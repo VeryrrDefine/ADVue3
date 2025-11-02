@@ -1,7 +1,7 @@
 
 import {defineComponent} from 'vue';
 
-export const defineComponent({
+export default defineComponent({
   name: "App",
     setup() {
       return ()=><><div>
