@@ -20,7 +20,7 @@ export default defineComponent({
                 <NewsTicker />
                 <div class="tab-container">
                   <HeaderPrestigeGroup />
-                  Liuliu66686 est méchant
+                  Je voudrais un thé et un café
                 </div>
               </div>
             </div>

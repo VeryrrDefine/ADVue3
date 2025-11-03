@@ -5,7 +5,7 @@ export default defineComponent({
   setup(props, ctx) {
     return () => (
       <>
-        {(['1', '2'] as const).map((x) => (
+        {(['1', '2', '3', '4'] as const).map((x) => (
           <div
             // v-if="!isHidden && isAvailable"
             // :class="[classObject, tab.config.UIClass]"
@@ -20,18 +20,22 @@ export default defineComponent({
               class="l-tab-btn-inner"
               // @click="tab.show(true)"
             >
-              何意味
+              {x}
               {/* <div
                 // v-if="hasNotification"
                 class="fas fa-circle-exclamation l-notification-icon"
               /> */}
             </div>
             <div class="subtabs">
-              {(['那', '我', '问', '你'] as const).map((x) => (
+              {([Number(x) * 4, Number(x) * 9] as const).map((y) => (
                 <div
                   // v-if="subtabVisibilities[index]"
                   // :key="index"
-                  class="o-tab-btn o-tab-btn--subtab o-subtab-btn--active"
+                  class={[
+                    'o-tab-btn',
+                    'o-tab-btn--subtab',
+                    y == Number(x) * 4 && 'o-subtab-btn--active',
+                  ]}
                   // :class="
                   //   [tab.config.UIClass,
                   //   {'o-subtab-btn--active': isCurrentSubtab(subtab.id)}]
@@ -39,7 +43,7 @@ export default defineComponent({
                   // @click="subtab.show(true)"
                 >
                   {/* <span v-html="subtab.symbol" /> */}
-                  {x}
+                  {y}
                   {/* <div
                   // v-if="subtab.hasNotification"
                   class="fas fa-circle-exclamation l-notification-icon"
