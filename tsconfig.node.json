@@ -14,6 +14,9 @@
 
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "types": ["node"]
+    "types": ["node"],
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "experimentalDecorators": true
   }
 }

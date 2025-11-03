@@ -7,6 +7,12 @@
 
     "paths": {
       "@/*": ["./src/*"]
-    }
-  }
+    },
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "experimentalDecorators": true
+  },
+  "allowJs": true,
+  "strict": true
 }
