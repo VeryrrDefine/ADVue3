@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HeaderPrestigeGroup from './ui-modes/HeaderPrestigeGroup'
+import NewsTicker from './ui-modes/NewsTicker.vue'
 </script>
 
 <template>
