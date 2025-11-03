@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HeaderPrestigeGroup from './ui-modes/HeaderPrestigeGroup'
+</script>
 
 <template>
   <div id="page">
