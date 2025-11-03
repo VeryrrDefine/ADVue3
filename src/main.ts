@@ -29,7 +29,7 @@ import './assets/vis-network.css'
 import './assets/new-ui-styles.css'
 import './assets/vue-sfc-classes.css'
 
-import './assets/main.scss'
+import './main.scss'
 import { createApp } from 'vue'
 import App from './App.tsx'
 

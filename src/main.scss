@@ -126,3 +126,34 @@
 .o-sidebar-currency--pelle {
   color: var(--color-pelle--base);
 }
+.c-prestige-info-blocks {
+  display: flex;
+  flex-direction: row;
+  height: 14rem;
+  width: 100%;
+  color: var(--color-text);
+}
+
+.l-game-header__eternity {
+  position: absolute;
+  left: calc(25% - 22rem);
+  width: 22rem;
+}
+
+.l-game-header__center {
+  position: absolute;
+  right: calc(50% - 25rem);
+  width: 50rem;
+}
+
+.l-game-header__infinity {
+  position: absolute;
+  right: calc(25% - 22rem);
+  width: 22rem;
+}
+.c-reality-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}

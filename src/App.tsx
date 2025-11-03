@@ -1,6 +1,7 @@
 import { defineComponent } from 'vue'
 import GameComponentFixed from './components/GameComponentFixed'
 import NewsTicker from './components/ui-modes/NewsTicker.vue'
+import HeaderPrestigeGroup from './components/ui-modes/HeaderPrestigeGroup'
 
 export default defineComponent({
   name: 'App',
@@ -17,7 +18,10 @@ export default defineComponent({
             <div id="page">
               <div class="game-container">
                 <NewsTicker />
-                <div class="tab-containter">Liuliu66686 est méchant</div>
+                <div class="tab-container">
+                  <HeaderPrestigeGroup />
+                  Liuliu66686 est méchant
+                </div>
               </div>
             </div>
             {/* 
