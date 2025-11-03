@@ -27,7 +27,7 @@ export default defineComponent({
               /> */}
             </div>
             <div class="subtabs">
-              {([Number(x) * 4, Number(x) * 9] as const).map((y) => (
+              {([Number(x) * 4, Number(x) ** 2] as const).map((y) => (
                 <div
                   // v-if="subtabVisibilities[index]"
                   // :key="index"
@@ -49,7 +49,7 @@ export default defineComponent({
                   class="fas fa-circle-exclamation l-notification-icon"
                 /> */}
                   <div class="o-subtab__tooltip">
-                    {x.charCodeAt(0)}
+                    安提玛特带们森
                     {/* {{ subtab.name }} */}
                   </div>
                 </div>

@@ -2,6 +2,7 @@ import { defineComponent } from 'vue'
 import GameComponentFixed from './components/GameComponentFixed'
 import NewsTicker from './components/ui-modes/NewsTicker.vue'
 import HeaderPrestigeGroup from './components/ui-modes/HeaderPrestigeGroup'
+import Page from './components/Page.vue'
 
 export default defineComponent({
   name: 'App',
@@ -15,15 +16,7 @@ export default defineComponent({
           class="ui-wrapper new-ui"
         >
           <div id="ui" class="c-game-ui">
-            <div id="page">
-              <div class="game-container">
-                <NewsTicker />
-                <div class="tab-container">
-                  <HeaderPrestigeGroup />
-                  Je voudrais un thé et un café
-                </div>
-              </div>
-            </div>
+            <Page />
             {/* 
             <S12DesktopIcons v-if="isThemeS12" />
             <link

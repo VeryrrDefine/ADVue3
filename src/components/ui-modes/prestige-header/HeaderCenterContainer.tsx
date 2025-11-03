@@ -92,7 +92,7 @@ export default defineComponent({
           You have{' '}
           <span class="c-game-header__antimatter">
             {/* {{ format(antimatter, 2, 1) }} */}
-            -1.797e308
+            Infinite
           </span>{' '}
           antimatter.
         </span>
