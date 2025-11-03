@@ -5,28 +5,33 @@ export default defineComponent({
   setup(props, ctx) {
     return () => (
       <>
-        {['1', '2'].map(() => (
+        {(['1', '2'] as const).map((x) => (
           <div
             // v-if="!isHidden && isAvailable"
             // :class="[classObject, tab.config.UIClass]"
-            class="o-tab-btn o-tab-btn--modern-tabs o-tab-btn--subtabs o-tab-btn--active"
+            class={[
+              'o-tab-btn',
+              'o-tab-btn--modern-tabs',
+              'o-tab-btn--subtabs',
+              x == '1' && 'o-tab-btn--active',
+            ]}
           >
             <div
               class="l-tab-btn-inner"
               // @click="tab.show(true)"
             >
               何意味
-              <div
+              {/* <div
                 // v-if="hasNotification"
                 class="fas fa-circle-exclamation l-notification-icon"
-              />
+              /> */}
             </div>
             <div class="subtabs">
               {(['那', '我', '问', '你'] as const).map((x) => (
                 <div
                   // v-if="subtabVisibilities[index]"
                   // :key="index"
-                  class="o-tab-btn o-tab-btn--subtab"
+                  class="o-tab-btn o-tab-btn--subtab o-subtab-btn--active"
                   // :class="
                   //   [tab.config.UIClass,
                   //   {'o-subtab-btn--active': isCurrentSubtab(subtab.id)}]
