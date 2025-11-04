@@ -30,7 +30,6 @@ import './assets/new-ui-styles.css'
 import './assets/vue-sfc-classes.css'
 
 import './main.scss'
-import { createApp } from 'vue'
-import App from './App.tsx'
+import { init } from './core/init'
 
-createApp(App).mount('#app')
+document.addEventListener('DOMContentLoaded', init)

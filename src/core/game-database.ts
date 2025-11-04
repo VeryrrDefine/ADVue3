@@ -14,5 +14,9 @@ export const GameDatabase = {
       id: '1',
       text: 'timeout seeted, 1000ms.',
     },
+    {
+      id: '2',
+      text: 'GameDatabaseGameDatabaseGameDatabaseGameDatabase',
+    },
   ] satisfies News[],
 } as const

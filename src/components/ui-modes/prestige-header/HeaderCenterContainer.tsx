@@ -1,5 +1,7 @@
 import { defineComponent } from 'vue'
 import HeaderTickspeedInfo from '../HeaderTickspeedInfo'
+import { player } from '@/core/player'
+import { format } from '@/lib/format'
 
 {
   /* <script>
@@ -92,7 +94,7 @@ export default defineComponent({
           You have{' '}
           <span class="c-game-header__antimatter">
             {/* {{ format(antimatter, 2, 1) }} */}
-            Infinite
+            {format(player.antimatter, 2, 1)}
           </span>{' '}
           antimatter.
         </span>
