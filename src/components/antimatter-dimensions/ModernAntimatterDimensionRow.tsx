@@ -16,7 +16,7 @@ export default defineComponent({
           class="c-dimension-row l-dimension-row-antimatter-dim c-antimatter-dim-row l-dimension-single-row"
           // :class="{ 'c-dim-row--not-reached': !isUnlocked }"
         >
-          GenericDimensionRowTextPlaceholder{props.tier}
+          GenericDim.Rtph.{props.tier}
           {/* <GenericDimensionRowText
                 // :tier="tier"
                 // :name="name"
@@ -44,12 +44,12 @@ export default defineComponent({
                   // "tutorial--glow": this.isAffordable && this.hasTutorial,
                 }}
               >
-                <div>{/* {{ buttonPrefix }} */}buttonPrefix</div>
+                <div>{/* {{ buttonPrefix }} */}Buy 0</div>
                 <div
                 // :class="{ 'l-dim-row-small-text': hasLongText }"
                 >
                   {/* {{ buttonValue }} */}
-                  buttonValue
+                  Cost: NaN AM
                 </div>
                 <div
                   // v-if="hasTutorial"

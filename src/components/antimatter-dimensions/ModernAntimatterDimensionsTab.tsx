@@ -2,6 +2,7 @@ import { defineComponent } from 'vue'
 import PrimaryButton from '../PrimaryButton'
 import TickspeedRow from './TickspeedRow'
 import ModernAntimatterDimensionRow from './ModernAntimatterDimensionRow'
+import DimensionBoostRow from './DimensionBoostRow'
 
 export default defineComponent({
   name: 'ModernAntimatterDimensionsTab',
@@ -44,6 +45,25 @@ export default defineComponent({
               <ModernAntimatterDimensionRow key={x} tier={x} />
             ))}
           </div>
+          <div class="resets-container">
+            {/* <DimensionBoostRow /> */}
+            <DimensionBoostRow />
+            {false && (
+              <PrimaryButton
+                // v-if="isQuickResetAvailable"
+                class="o-primary-btn--quick-reset"
+                // onclick="softReset(-1, true, true)"
+              >
+                Perform a Dimension Boost reset
+                <span> for no gain</span>
+                {/* <span v-if="hasDimensionBoosts"> but lose a Dimension Boost</span>
+              <span v-else> for no gain</span> */}
+              </PrimaryButton>
+            )}
+            <DimensionBoostRow />
+            {/* <AntimatterGalaxyRow /> */}
+          </div>
+          {/* <AntimatterDimensionProgressBar /> */}
           {/* <span>{{ multiplierText }}</span>
     <TickspeedRow />
     <div class="l-dimensions-container">
