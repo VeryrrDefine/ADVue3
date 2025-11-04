@@ -1,4 +1,4 @@
-import { computed, defineComponent, useAttrs } from 'vue'
+import { computed, defineComponent, useAttrs, type PropType } from 'vue'
 
 export default defineComponent({
   name: 'PrimaryButton',
@@ -7,6 +7,10 @@ export default defineComponent({
       type: Boolean,
       required: false,
       default: true,
+    },
+    class: {
+      type: [Array, String] as PropType<Array<string> | string>,
+      default: [],
     },
   },
   setup(props, ctx) {
@@ -28,11 +32,9 @@ export default defineComponent({
       {} as Record<string, (x: Event) => void>,
     )
     return () => (
-      <>
-        <button class={a.value} {...eventListeners}>
-          {ctx.slots.default && ctx.slots.default()}
-        </button>
-      </>
+      <button class={[a.value, props.class]} {...eventListeners}>
+        {ctx.slots.default && ctx.slots.default()}
+      </button>
     )
   },
 })

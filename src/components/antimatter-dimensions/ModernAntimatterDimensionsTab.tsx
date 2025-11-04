@@ -1,5 +1,7 @@
 import { defineComponent } from 'vue'
 import PrimaryButton from '../PrimaryButton'
+import TickspeedRow from './TickspeedRow'
+import ModernAntimatterDimensionRow from './ModernAntimatterDimensionRow'
 
 export default defineComponent({
   name: 'ModernAntimatterDimensionsTab',
@@ -34,6 +36,13 @@ export default defineComponent({
             >
               Max All (M)
             </button>
+          </div>
+          <span>Buy 10 Dimension purchase multiplier: ×1.00</span>
+          <TickspeedRow />
+          <div class="l-dimensions-container">
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((x) => (
+              <ModernAntimatterDimensionRow key={x} tier={x} />
+            ))}
           </div>
           {/* <span>{{ multiplierText }}</span>
     <TickspeedRow />
