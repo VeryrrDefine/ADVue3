@@ -11,3 +11,6 @@ export function fromBitMask(mask: number) {
     }
     return bitIndices
 }
+export function toBitMask(array: Array<number>) {
+    return array.reduce((prev, val) => prev | (1 << val), 0)
+}

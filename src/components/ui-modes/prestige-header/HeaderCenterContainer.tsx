@@ -1,7 +1,7 @@
 import { defineComponent } from 'vue'
 import HeaderTickspeedInfo from '../HeaderTickspeedInfo'
-import { player } from '@/core/player'
 import { format } from '@/lib/format'
+import { usePlayerData } from '@/lib/composables/usePlayerData'
 
 {
     /* <script>
@@ -85,6 +85,7 @@ export default {
 export default defineComponent({
     name: 'HeaderCenterContainer',
     setup() {
+        const antimatter = usePlayerData((player) => player.antimatter)
         return () => (
             <div
                 // v-if="shouldDisplay"
@@ -94,7 +95,7 @@ export default defineComponent({
                     You have{' '}
                     <span class="c-game-header__antimatter">
                         {/* {{ format(antimatter, 2, 1) }} */}
-                        {format(player.antimatter, 2, 1)}
+                        {format(antimatter.value, 2, 1)}
                     </span>{' '}
                     antimatter.
                 </span>

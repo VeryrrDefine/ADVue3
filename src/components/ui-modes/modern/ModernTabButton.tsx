@@ -1,3 +1,4 @@
+import { clickSubtab, clickTab, isSubtabOpened, isTabOpened, tab } from '@/core/tabs'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
@@ -5,7 +6,7 @@ export default defineComponent({
     setup(props, ctx) {
         return () => (
             <>
-                {(['1', '2', '3', '4'] as const).map((x) => (
+                {tab.map((x) => (
                     <div
                         // v-if="!isHidden && isAvailable"
                         // :class="[classObject, tab.config.UIClass]"
@@ -13,29 +14,31 @@ export default defineComponent({
                             'o-tab-btn',
                             'o-tab-btn--modern-tabs',
                             'o-tab-btn--subtabs',
-                            x == '1' && 'o-tab-btn--active',
+                            isTabOpened(x.id) && 'o-tab-btn--active',
                         ]}
                     >
                         <div
                             class="l-tab-btn-inner"
+                            onClick={() => clickTab(x.id)}
                             // @click="tab.show(true)"
                         >
-                            {x}
+                            {x.name}
                             {/* <div
                 // v-if="hasNotification"
                 class="fas fa-circle-exclamation l-notification-icon"
               /> */}
                         </div>
                         <div class="subtabs">
-                            {([Number(x) * 4, Number(x) ** 2] as const).map((y) => (
+                            {x.subtabs.map((y) => (
                                 <div
                                     // v-if="subtabVisibilities[index]"
                                     // :key="index"
                                     class={[
                                         'o-tab-btn',
                                         'o-tab-btn--subtab',
-                                        y == Number(x) * 4 && 'o-subtab-btn--active',
+                                        isSubtabOpened(x.id, y.id) && 'o-subtab-btn--active',
                                     ]}
+                                    onClick={() => clickSubtab(x.id, y.id)}
                                     // :class="
                                     //   [tab.config.UIClass,
                                     //   {'o-subtab-btn--active': isCurrentSubtab(subtab.id)}]
@@ -43,13 +46,13 @@ export default defineComponent({
                                     // @click="subtab.show(true)"
                                 >
                                     {/* <span v-html="subtab.symbol" /> */}
-                                    {y}
+                                    {y.symbol}
                                     {/* <div
                   // v-if="subtab.hasNotification"
                   class="fas fa-circle-exclamation l-notification-icon"
                 /> */}
                                     <div class="o-subtab__tooltip">
-                                        安提玛特带们森
+                                        {y.name}
                                         {/* {{ subtab.name }} */}
                                     </div>
                                 </div>
