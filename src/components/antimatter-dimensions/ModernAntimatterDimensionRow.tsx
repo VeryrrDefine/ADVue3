@@ -1,80 +1,80 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'ModernAntimatterDimensionRow',
-  props: {
-    tier: {
-      type: Number,
-      required: true,
+    name: 'ModernAntimatterDimensionRow',
+    props: {
+        tier: {
+            type: Number,
+            required: true,
+        },
     },
-  },
-  setup(props, ctx) {
-    return () => (
-      <>
-        <div
-          v-show="showRow"
-          class="c-dimension-row l-dimension-row-antimatter-dim c-antimatter-dim-row l-dimension-single-row"
-          // :class="{ 'c-dim-row--not-reached': !isUnlocked }"
-        >
-          GenericDim.Rtph.{props.tier}
-          {/* <GenericDimensionRowText
+    setup(props, ctx) {
+        return () => (
+            <>
+                <div
+                    v-show="showRow"
+                    class="c-dimension-row l-dimension-row-antimatter-dim c-antimatter-dim-row l-dimension-single-row"
+                    // :class="{ 'c-dim-row--not-reached': !isUnlocked }"
+                >
+                    GenericDim.Rtph.{props.tier}
+                    {/* <GenericDimensionRowText
                 // :tier="tier"
                 // :name="name"
                 // :multiplier-text="formatX(multiplier, 2, 2)"
                 // :amount-text="amountDisplay"
                 // :rate="rateOfChange"
                 /> */}
-          <div class="l-dim-row-multi-button-container c-modern-dim-tooltip-container">
-            <div class="c-modern-dim-purchase-count-tooltip">
-              boughtTooltip{/* {{ boughtTooltip }} */}
-            </div>
-            <button
-              class={{
-                'o-primary-btn o-primary-btn--new': true,
-                // "o-primary-btn--disabled": (!this.isAffordable && !this.isContinuumActive) || !this.isUnlocked || this.isCapped,
-                // "o-non-clickable o-continuum": this.isContinuumActive,
-              }}
-              // :class="buttonClass()"
-              // @click="buy"
-            >
-              <div
-                // :class="buttonTextClass()"
-                class={{
-                  'button-content l-modern-buy-ad-text': true,
-                  // "tutorial--glow": this.isAffordable && this.hasTutorial,
-                }}
-              >
-                <div>{/* {{ buttonPrefix }} */}Buy 0</div>
-                <div
-                // :class="{ 'l-dim-row-small-text': hasLongText }"
-                >
-                  {/* {{ buttonValue }} */}
-                  Cost: NaN AM
+                    <div class="l-dim-row-multi-button-container c-modern-dim-tooltip-container">
+                        <div class="c-modern-dim-purchase-count-tooltip">
+                            boughtTooltip{/* {{ boughtTooltip }} */}
+                        </div>
+                        <button
+                            class={{
+                                'o-primary-btn o-primary-btn--new': true,
+                                // "o-primary-btn--disabled": (!this.isAffordable && !this.isContinuumActive) || !this.isUnlocked || this.isCapped,
+                                // "o-non-clickable o-continuum": this.isContinuumActive,
+                            }}
+                            // :class="buttonClass()"
+                            // @click="buy"
+                        >
+                            <div
+                                // :class="buttonTextClass()"
+                                class={{
+                                    'button-content l-modern-buy-ad-text': true,
+                                    // "tutorial--glow": this.isAffordable && this.hasTutorial,
+                                }}
+                            >
+                                <div>{/* {{ buttonPrefix }} */}Buy 0</div>
+                                <div
+                                // :class="{ 'l-dim-row-small-text': hasLongText }"
+                                >
+                                    {/* {{ buttonValue }} */}
+                                    Cost: NaN AM
+                                </div>
+                                <div
+                                    // v-if="hasTutorial"
+                                    class="fas fa-circle-exclamation l-notification-icon"
+                                />
+                            </div>
+                            <div
+                                //   v-if="!isContinuumActive && isUnlocked && !isCapped"
+                                class="fill"
+                            >
+                                <div
+                                    class="fill-purchased"
+                                    // :style="{ width: boughtBefore10.toNumber() * 10 + '%' }"
+                                />
+                                <div
+                                    class="fill-possible"
+                                    //  :style="{ width: howManyCanBuy.toNumber() * 10 + '%' }"
+                                />
+                            </div>
+                        </button>
+                    </div>
                 </div>
-                <div
-                  // v-if="hasTutorial"
-                  class="fas fa-circle-exclamation l-notification-icon"
-                />
-              </div>
-              <div
-                //   v-if="!isContinuumActive && isUnlocked && !isCapped"
-                class="fill"
-              >
-                <div
-                  class="fill-purchased"
-                  // :style="{ width: boughtBefore10.toNumber() * 10 + '%' }"
-                />
-                <div
-                  class="fill-possible"
-                  //  :style="{ width: howManyCanBuy.toNumber() * 10 + '%' }"
-                />
-              </div>
-            </button>
-          </div>
-        </div>
-      </>
-    )
-  },
+            </>
+        )
+    },
 })
 
 /**

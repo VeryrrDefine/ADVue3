@@ -4,7 +4,7 @@ import { player } from '@/core/player'
 import { format } from '@/lib/format'
 
 {
-  /* <script>
+    /* <script>
 import ArmageddonButton from "../../tabs/celestial-pelle/ArmageddonButton";
 import RealityCurrencyHeader from "../../RealityCurrencyHeader";
 
@@ -83,22 +83,22 @@ export default {
 </style> */
 }
 export default defineComponent({
-  name: 'HeaderCenterContainer',
-  setup() {
-    return () => (
-      <div
-        // v-if="shouldDisplay"
-        class="c-prestige-button-container l-game-header__center"
-      >
-        <span>
-          You have{' '}
-          <span class="c-game-header__antimatter">
-            {/* {{ format(antimatter, 2, 1) }} */}
-            {format(player.antimatter, 2, 1)}
-          </span>{' '}
-          antimatter.
-        </span>
-        {/* <div
+    name: 'HeaderCenterContainer',
+    setup() {
+        return () => (
+            <div
+                // v-if="shouldDisplay"
+                class="c-prestige-button-container l-game-header__center"
+            >
+                <span>
+                    You have{' '}
+                    <span class="c-game-header__antimatter">
+                        {/* {{ format(antimatter, 2, 1) }} */}
+                        {format(player.antimatter, 2, 1)}
+                    </span>{' '}
+                    antimatter.
+                </span>
+                {/* <div
           // v-if="hasRealityButton"
           class="c-reality-container"
         >
@@ -109,15 +109,15 @@ export default defineComponent({
       />
           <RealityButton v-else />
         </div> */}
-        <div
-        // v-else
-        >
-          You are getting 0.00 antimatter per second.
-          {/* {{ format(antimatterPerSec, 2) }}  */}
-          <br />
-          <HeaderTickspeedInfo />
-        </div>
-      </div>
-    )
-  },
+                <div
+                // v-else
+                >
+                    You are getting 0.00 antimatter per second.
+                    {/* {{ format(antimatterPerSec, 2) }}  */}
+                    <br />
+                    <HeaderTickspeedInfo />
+                </div>
+            </div>
+        )
+    },
 })

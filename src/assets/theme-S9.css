@@ -1,8 +1,8 @@
 * {
-  color: transparent !important;
-  text-shadow: none !important;
-  -webkit-user-select: none;
-  user-select: none;
+    color: transparent !important;
+    text-shadow: none !important;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 /* These are needed for the shop not to be blind */
@@ -13,7 +13,7 @@
 .c-shop-modal .c-modal__title,
 .c-shop-modal .c-modal__close-btn,
 .o-modal-store-label {
-  color: white !important;
+    color: white !important;
 }
 
 .c-shop-header > button,
@@ -21,7 +21,7 @@
 .o-modal-store-btn,
 .o-modal-store-btn > span,
 .c-shop-disclaimer {
-  color: black !important;
+    color: black !important;
 }
 
 /* classic UI */
@@ -29,45 +29,47 @@
 .old-ui .c-shop-modal .c-modal__title,
 .old-ui .o-modal-store-label,
 .old-ui .c-shop-modal .c-modal__close-btn {
-  color: black !important;
+    color: black !important;
 }
 
 [ach-tooltip]::before {
-  color: transparent;
+    color: transparent;
 }
 
 ::placeholder {
-  opacity: 0;
+    opacity: 0;
 }
 
 .o-achievement--normal,
 .o-achievement--secret,
 .o-achievement--cancer {
-  background-image: none;
+    background-image: none;
 }
 
 .o-big-crunch-button:hover span,
 .o-eternity-button:hover span {
-  color: transparent !important;
+    color: transparent !important;
 }
 
 .o-celestial-nav__symbol {
-  display: none;
+    display: none;
 }
 
 .c-effarig-run-button__inner--running {
-  display: none;
+    display: none;
 }
 
 .o-laitela-run-button__icon,
 .o-laitela-run-button__icon:hover {
-  background-image: none;
+    background-image: none;
 }
 
 @keyframes a-reality-glyph-description-cycle {
-  0% { color: transparent; }
+    0% {
+        color: transparent;
+    }
 }
 
 .o-celestial-nav__legend-text {
-  fill: transparent !important;
+    fill: transparent !important;
 }

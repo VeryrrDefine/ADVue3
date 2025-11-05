@@ -175,29 +175,29 @@ export default {
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'TickspeedRow',
-  setup() {
-    return () => (
-      <>
-        <div
-          class={{
-            'l-tickspeed-container': true,
-            // 'l-tickspeed-container--hidden': !this.isVisible,
-          }}
-        >
-          <div class="tickspeed-buttons">
-            <button
-              // v-tooltip="upgradeCount"
-              class={{
-                'o-primary-btn': true,
-                'tickspeed-btn': true,
-                // "o-primary-btn--disabled": !this.isAffordable && !this.isContinuumActive,
-                // "o-non-clickable o-continuum": this.isContinuumActive,
-                // "tutorial--glow": this.isAffordable && this.hasTutorial
-              }}
-              // onclick="buyTickSpeed()"
-            >
-              {/* <span 
+    name: 'TickspeedRow',
+    setup() {
+        return () => (
+            <>
+                <div
+                    class={{
+                        'l-tickspeed-container': true,
+                        // 'l-tickspeed-container--hidden': !this.isVisible,
+                    }}
+                >
+                    <div class="tickspeed-buttons">
+                        <button
+                            // v-tooltip="upgradeCount"
+                            class={{
+                                'o-primary-btn': true,
+                                'tickspeed-btn': true,
+                                // "o-primary-btn--disabled": !this.isAffordable && !this.isContinuumActive,
+                                // "o-non-clickable o-continuum": this.isContinuumActive,
+                                // "tutorial--glow": this.isAffordable && this.hasTutorial
+                            }}
+                            // onclick="buyTickSpeed()"
+                        >
+                            {/* <span 
         // v-if="isContinuumActive"
         >
           { Tickspeed Continuum: {{ continuumString }} }
@@ -208,34 +208,34 @@ export default defineComponent({
         >
           Tickspeed Unpurchasable (EC 9)
         </span> */}
-              <span
-              //  v-else
-              >
-                {/* Tickspeed Cost: {{ format(cost) }} */}
-                Tickspeed Cost: 0.00
-              </span>
-              {/* <div
+                            <span
+                            //  v-else
+                            >
+                                {/* Tickspeed Cost: {{ format(cost) }} */}
+                                Tickspeed Cost: 0.00
+                            </span>
+                            {/* <div
           v-if="hasTutorial"
           class="fas fa-circle-exclamation l-notification-icon"
         /> */}
-            </button>
-            <button
-              // v-if="!isContinuumActive"
-              class="o-primary-btn tickspeed-max-btn"
-              // :class="{ 'o-primary-btn--disabled': !isAffordable && !isContinuumActive }"
-              // onclick="buyMaxTickSpeed()"
-            >
-              Buy Max
-            </button>
-          </div>
-          {/* <div
+                        </button>
+                        <button
+                            // v-if="!isContinuumActive"
+                            class="o-primary-btn tickspeed-max-btn"
+                            // :class="{ 'o-primary-btn--disabled': !isAffordable && !isContinuumActive }"
+                            // onclick="buyMaxTickSpeed()"
+                        >
+                            Buy Max
+                        </button>
+                    </div>
+                    {/* <div
       v-if="hasRealityButton"
       class="tickspeed-labels"
     >
       {{ tickspeedDisplay }} | {{ multiplierDisplay }}
     </div> */}
-        </div>
-      </>
-    )
-  },
+                </div>
+            </>
+        )
+    },
 })

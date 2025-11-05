@@ -1,14 +1,14 @@
 html {
-  background: url("../images/s5-bg.jpg");
-  background-position-x: 50%;
-  background-position-y: 50%;
-  background-size: 150%;
+    background: url('../images/s5-bg.jpg');
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: 150%;
 }
 
 body.t-s5 {
-  color: black;
-  text-shadow: 0.5px 0.5px 0 black;
-  background: none;
+    color: black;
+    text-shadow: 0.5px 0.5px 0 black;
+    background: none;
 }
 
 .t-s5 #container,
@@ -17,5 +17,5 @@ body.t-s5 {
 .t-s5 .c-modal,
 .t-s5 .time-theorem-buttons,
 .t-s5 .c-modern-sidebar {
-  filter: sepia(100%) hue-rotate(0deg) saturate(100%);
+    filter: sepia(100%) hue-rotate(0deg) saturate(100%);
 }

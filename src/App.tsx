@@ -5,19 +5,19 @@ import HeaderPrestigeGroup from './components/ui-modes/HeaderPrestigeGroup'
 import Page from './components/Page.vue'
 
 export default defineComponent({
-  name: 'App',
-  setup() {
-    return () => (
-      <>
-        <div
-          // v-if="view.initialized"
-          id="ui-container"
-          // :class="containerClass"
-          class="ui-wrapper new-ui"
-        >
-          <div id="ui" class="c-game-ui">
-            <Page />
-            {/* 
+    name: 'App',
+    setup() {
+        return () => (
+            <>
+                <div
+                    // v-if="view.initialized"
+                    id="ui-container"
+                    // :class="containerClass"
+                    class="ui-wrapper new-ui"
+                >
+                    <div id="ui" class="c-game-ui">
+                        <Page />
+                        {/* 
             <S12DesktopIcons v-if="isThemeS12" />
             <link
               v-if="view.theme !== 'Normal'"
@@ -25,13 +25,13 @@ export default defineComponent({
               rel="stylesheet"
               :href="themeCss"
             > */}
-          </div>
-          <GameComponentFixed />
-          {/* <GameUiComponentFixed v-if="!isThemeS12" />
+                    </div>
+                    <GameComponentFixed />
+                    {/* <GameUiComponentFixed v-if="!isThemeS12" />
           <BackgroundAnimations v-if="!isThemeS12" />
           <S12UiFixed v-if="isThemeS12" /> */}
-        </div>
-      </>
-    )
-  },
+                </div>
+            </>
+        )
+    },
 })

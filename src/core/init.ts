@@ -4,13 +4,13 @@ import App from '@/App'
 import { format } from '@/lib/format'
 
 declare global {
-  interface Window {
-    player?: typeof player
-    format?: typeof format
-  }
+    interface Window {
+        player?: typeof player
+        format?: typeof format
+    }
 }
 export function init() {
-  window.player = player
-  window.format = format
-  createApp(App).mount('#app')
+    window.player = player
+    window.format = format
+    createApp(App).mount('#app')
 }

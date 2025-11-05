@@ -2,18 +2,18 @@ import { player, type Player } from '@/core/player'
 import { onUnmounted, shallowRef } from 'vue'
 
 export const usePlayerData = <T>(selector: (player: Player) => T) => {
-  const value = shallowRef(selector(player))
+    const value = shallowRef(selector(player))
 
-  const updateRefValue = () => {
-    value.value = selector(player)
-    animationFrameRequest = requestAnimationFrame(updateRefValue)
-  }
+    const updateRefValue = () => {
+        value.value = selector(player)
+        animationFrameRequest = requestAnimationFrame(updateRefValue)
+    }
 
-  let animationFrameRequest = requestAnimationFrame(updateRefValue)
+    let animationFrameRequest = requestAnimationFrame(updateRefValue)
 
-  onUnmounted(() => {
-    cancelAnimationFrame(animationFrameRequest)
-  })
+    onUnmounted(() => {
+        cancelAnimationFrame(animationFrameRequest)
+    })
 
-  return value
+    return value
 }

@@ -6,14 +6,14 @@ import ModernSideBar from './ui-modes/modern/ModernSideBar'
 and left-down save tip, time theorem shop
  */
 export default defineComponent({
-  name: 'GameComponentFixed',
-  setup(props, ctx) {
-    return () => (
-      <>
-        <div id="ui-fixed" class="c-game-ui--fixed">
-          <div id="notification-container" class="l-notification-container" />
-          <ModernSideBar />
-          {/* <HowToPlay style="hideIfMatoFullscreen" />
+    name: 'GameComponentFixed',
+    setup(props, ctx) {
+        return () => (
+            <>
+                <div id="ui-fixed" class="c-game-ui--fixed">
+                    <div id="notification-container" class="l-notification-container" />
+                    <ModernSideBar />
+                    {/* <HowToPlay style="hideIfMatoFullscreen" />
     <TimeTheoremShop
       v-if="view.subtab === 'studies'"
       class="l-time-studies-tab__tt-shop"
@@ -44,8 +44,8 @@ export default defineComponent({
       <NewGame v-if="ending" />
       <SpectateGame />
     </template> */}
-        </div>
-      </>
-    )
-  },
+                </div>
+            </>
+        )
+    },
 })

@@ -1,18 +1,18 @@
 import { onUnmounted, shallowRef } from 'vue'
 
 export const useUpdate = <T>(selector: () => T) => {
-  const value = shallowRef(selector())
+    const value = shallowRef(selector())
 
-  const updateRefValue = () => {
-    value.value = selector()
-    animationFrameRequest = requestAnimationFrame(updateRefValue)
-  }
+    const updateRefValue = () => {
+        value.value = selector()
+        animationFrameRequest = requestAnimationFrame(updateRefValue)
+    }
 
-  let animationFrameRequest = requestAnimationFrame(updateRefValue)
+    let animationFrameRequest = requestAnimationFrame(updateRefValue)
 
-  onUnmounted(() => {
-    cancelAnimationFrame(animationFrameRequest)
-  })
+    onUnmounted(() => {
+        cancelAnimationFrame(animationFrameRequest)
+    })
 
-  return value
+    return value
 }
